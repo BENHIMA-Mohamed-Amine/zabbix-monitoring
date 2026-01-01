@@ -1,0 +1,7 @@
+stress --cpu 2 --timeout 60s
+xfreerdp /v:18.234.60.185 /u:Administrator /p:'gGRh@9T;r$tt&J3dta$@B0kL?h&=d3sF' /cert:ignore
+https://www.zabbix.com/download_agents
+New-NetFirewallRule -DisplayName "Zabbix Agent" -Direction Inbound -Protocol TCP -LocalPort 10050 -Action Allow
+nano /etc/zabbix/zabbix_agentd.conf
+sudo systemctl status zabbix-agent
+services.msc
